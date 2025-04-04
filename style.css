@@ -1,0 +1,124 @@
+#app {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+  }
+  
+  #canvas-container {
+    background: white;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin-right: 16px;
+  }
+  
+  #toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    align-items: center;
+  }
+  
+  #toolbar button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  #toolbar button.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #color-picker {
+    border: 1px solid #ccc;
+    cursor: crosshair;
+  }
+  
+  #brush-size {
+    width: 100%;
+  }
+
+  #current-color-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #current-color {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: #000000;
+  }
+  
+  #color-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+  
+  #color-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #hue-bar {
+    width: 20px;
+    height: 200px;
+    writing-mode: vertical-lr;
+  }
+ 
+  #text-input {
+    position: absolute;
+    display: none;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 10;
+    background-color: white;
+  }
+
+  #tool-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  #tool-buttons button,
+  #tool-buttons input[type="file"] {
+    width: 100%;
+  }
+
+  #font-select {
+    margin-top: 4px;
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  #toolbar button.active.rainbow-active {
+    background: linear-gradient(to right, 
+      red, orange, yellow, green, blue, indigo, violet);
+    color: white;
+    font-weight: bold;
+  }
+  
+  
